@@ -175,34 +175,37 @@ footer{padding:14px 20px;background:rgba(0,0,0,0.3);text-align:center;color:var(
 
 .navbar a {
     position: relative;
-    display: inline-block;
     padding: 10px 18px;
-    font-size: 18px;
-    font-weight: 700;
     color: #fff;
     text-decoration: none;
-    overflow: hidden;
-    transition: color 0.3s;
-}
-
-.navbar a::after {
-    content: "";
-    position: absolute;
-    left: -100%;
-    bottom: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #ffda47, #ff8d00);
-    transition: left 0.35s ease;
+    font-size: 18px;
+    font-weight: 700;
+    transition: transform 0.25s ease;
 }
 
 .navbar a:hover {
-    color: #ffda47;
+    transform: translateY(-6px) scale(1.08);
 }
 
-.navbar a:hover::after {
-    left: 0;
+.navbar a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 140, 0, 0.55);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.35s ease, height 0.35s ease;
+    z-index: -1;
 }
+
+.navbar a:hover::before {
+    width: 160%;
+    height: 160%;
+}
+
 
 
 

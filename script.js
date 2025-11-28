@@ -23,9 +23,9 @@ const PRODUCTS = [
   },
   {
     id: "p003",
-    title: "Coffret Manga Naruto - Vol.1-10",
-    price: "59.00€",
-    img: "https://images.unsplash.com/photo-1526318472351-c75fcf070c01?q=80&w=800&auto=format&fit=crop",
+    title: "Pack de Naruto - Tome 1 a 3,
+    price: "9,00€",
+    img: "https://m.media-amazon.com/images/I/91cTr93aQ6L._AC_UF1000,1000_QL80_.jpg",
     short: "Coffret Naruto 1 à 10 — édition standard.",
     category: "manga",
     affiliate: "https://www.amazon.fr/?tag=TA-PLACEHOLDER"
@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const searchInput = document.getElementById('searchInput');
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
+
 
 
 

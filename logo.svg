@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="100%" height="100%" rx="40" fill="#071022"/>
+  <g transform="translate(80,80)">
+    <!-- chat head -->
+    <ellipse cx="176" cy="120" rx="100" ry="88" fill="#7b5cff"/>
+    <!-- ear left -->
+    <path d="M86 48 L40 8 L92 36 Z" fill="#4b2fb8"/>
+    <!-- ear right -->
+    <path d="M266 48 L312 8 L260 36 Z" fill="#4b2fb8"/>
+    <!-- eye left -->
+    <ellipse cx="146" cy="120" rx="12" ry="18" fill="#071022"/>
+    <!-- eye right -->
+    <ellipse cx="206" cy="120" rx="12" ry="18" fill="#071022"/>
+    <!-- mouth -->
+    <path d="M176 150 Q186 162 196 150" stroke="#071022" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="50%" y="455" font-family="Arial, sans-serif" font-weight="700" font-size="46" fill="#e6eef6" text-anchor="middle">OtakuHub</text>
+</svg>

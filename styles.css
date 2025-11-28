@@ -120,10 +120,11 @@ footer{padding:14px 20px;background:rgba(0,0,0,0.3);text-align:center;color:var(
 
 .banner-otaku img {
   width: 100%;
-  height: auto;
+  height: 50%;
   display: block;
   border-bottom: 4px solid #ff4f4f; /* optionnel pour un style anime */
 }
+
 
 
 

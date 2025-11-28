@@ -10,7 +10,7 @@ const PRODUCTS = [
     img: "https://m.media-amazon.com/images/I/91ARyK3yMQL._AC_SL1500_.jpg",
     short: "Figurine Monkey D. Luffy de haute qualité — édition limitée.",
     category: "figures",
-    affiliate: "https://www.amazon.fr/?tag=TA-PLACEHOLDER"
+    affiliate: "https://amzn.to/3Xo8UdW"
   },
   {
     id: "p002",
@@ -33,11 +33,11 @@ const PRODUCTS = [
   {
     id: "p004",
     title: "Figurine Gojo Satoru 22cm",
-    price: "74.50€",
-    img: "https://images.unsplash.com/photo-1602524202558-4e7f76c3a8f3?q=80&w=800&auto=format&fit=crop",
+    price: "27.90€",
+    img: "https://m.media-amazon.com/images/I/510ZvrnQ1jL._AC_SL1200_.jpg",
     short: "Détails fins, peinture premium pour fans de Jujutsu Kaisen.",
     category: "figures",
-    affiliate: "https://www.amazon.fr/?tag=TA-PLACEHOLDER"
+    affiliate: "https://amzn.to/4p8ZoaM"
   }
 ];
 const ARTICLES = [
@@ -209,6 +209,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const searchInput = document.getElementById('searchInput');
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
+
 
 
 

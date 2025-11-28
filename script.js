@@ -5,140 +5,140 @@ const PRODUCTS = [
     price:"89.99€",
     img:"https://images.unsplash.com/photo-1520975916210-c7f055a6b9f1?q=80&w=800&auto=format&fit=crop",
     short:"Figurine haute qualité de Monkey D. Luffy, peinture détaillée, socle inclus.",
-    category:"figures", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"figures", },
 
   { id:"p002", 
     title:"Figurine Zoro - 20cm (PVC)", 
     price:"59.90€",
     img:"https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop",
     short:"Pose dynamique, base solide, parfait pour collectionneurs.",
-    category:"figures", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"figures",},
 
   { id:"p003", 
     title:"Figurine Naruto Uzumaki (Collector)", 
     price:"129.99€",
     img:"https://images.unsplash.com/photo-1526403224748-9f4f9f2b9e4e?q=80&w=800&auto=format&fit=crop",
     short:"Édition limitée, boîte collector, certificat d'authenticité.",
-    category:"figures", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"figures", },
 
   { id:"p004", 
     title:"Figurine Gojo Satoru 22cm", 
     price:"74.50€",
     img:"https://images.unsplash.com/photo-1602524202558-4e7f76c3a8f3?q=80&w=800&auto=format&fit=crop",
     short:"Détails fins, peinture premium pour fans de Jujutsu Kaisen.",
-    category:"figures", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"figures",  },
 
   { id:"p005", 
     title:"Figurine Tanjiro (Demon Slayer) 18cm", 
     price:"49.90€",
     img:"https://images.unsplash.com/photo-1526318472351-c75fcf070c01?q=80&w=800&auto=format&fit=crop",
     short:"Bonne finition pour un rapport qualité/prix excellent.",
-    category:"figures", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"figures",  },
 
   { id:"p006", 
     title:"Poster One Piece XXL (Mat)",
     price:"19.90€",
     img:"https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop",
     short:"Poster grand format, papier mat haute tenue, idéal chambre gamer.",
-    category:"goodies", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"goodies",  },
 
   { id:"p007", 
     title:"Poster Attack on Titan - Édition artistique", 
     price:"24.90€",
     img:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop",
     short:"Design premium par artiste indépendant.",
-    category:"goodies", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"goodies",  },
 
   { id:"p008", 
     title:"Tapis de souris XXL (Theme Anime)", 
     price:"29.99€",
     img:"https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop",
     short:"Surface lisse, idéal gamers, motif anime.",
-    category:"goodies", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"goodies",  },
 
   { id:"p009", 
     title:"Lampe LED Anime (Change couleur)", 
     price:"34.90€",
     img:"https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop",
     short:"Lampes décoratives style néon anime, télécommande incluse.",
-    category:"goodies", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"goodies",  },
 
   { id:"p010", 
     title:"Peluches Anime 30cm (Pack 2)", 
     price:"39.90€",
     img:"https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=800&auto=format&fit=crop",
     short:"Peluches douces, qualité kid-safe, excellent cadeau.",
-    category:"goodies", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"goodies",  },
 
   { id:"p011", 
     title:"Coffret Manga Naruto Vol.1-10 (Pack)", 
     price:"59.00€",
     img:"https://images.unsplash.com/photo-1526318472351-c75fcf070c01?q=80&w=800&auto=format&fit=crop",
     short:"Pack économique, bonne impression, parfait pour débuter la collection.",
-    category:"manga", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"manga", },
 
   { id:"p012", 
     title:"Coffret One Piece - Édition 25ème Anniversaire", 
     price:"149.99€",
     img:"https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=800&auto=format&fit=crop",
     short:"Edition spéciale avec goodies exclusifs.",
-    category:"manga", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"manga",  },
 
   { id:"p013", 
     title:"Figurine Édition PVC - Dark Fantasy 30cm", 
     price:"119.90€",
     img:"https://images.unsplash.com/photo-1582719478170-7faaeec0d6b9?q=80&w=800&auto=format&fit=crop",
     short:"Grande taille, détails scéniques, parfait pour vitrine.",
-    category:"figures", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"figures", },
 
   { id:"p014", 
     title:"Kit entretien figurines (pinceau, colle, chiffon)", 
     price:"14.90€",
     img:"https://images.unsplash.com/photo-1585155770872-5c3bbaec0e1f?q=80&w=800&auto=format&fit=crop",
     short:"Outils essentiels pour nettoyer/réparer petites pièces.",
-    category:"accessories", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"accessories", },
 
   { id:"p015", 
     title:"Présentoir acrylique pour figurines (3 niveaux)", 
     price:"29.90€",
     img:"https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?q=80&w=800&auto=format&fit=crop",
     short:"Présentoir transparent pour mettre tes figurines en valeur.",
-    category:"accessories", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"accessories", },
 
   { id:"p016", 
     title:"Boîte Collector blindée (stockage manga/figurine)", 
     price:"24.50€",
     img:"https://images.unsplash.com/photo-1593642634443-44adaa06623a?q=80&w=800&auto=format&fit=crop",
     short:"Protection et rangement pour collectionneurs.",
-    category:"accessories", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"accessories", },
 
   { id:"p017", 
     title:"Set miniature diorama (custom)", 
     price:"39.00€",
     img:"https://images.unsplash.com/photo-1579547621706-1a9c79d5f0b8?q=80&w=800&auto=format&fit=crop",
     short:"Crée des scènes pour mettre en valeur tes figurines.",
-    category:"accessories", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"accessories", },
 
   { id:"p018", 
     title:"Figurine Chibi Pack (lot 5)", 
     price:"44.90€",
     img:"https://images.unsplash.com/photo-1529400971008-f566de0e6dfc?q=80&w=800&auto=format&fit=crop",
     short:"Petites figurines mignonnes, parfaites pour bureau ou voiture.",
-    category:"figures", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"figures", },
 
   { id:"p019", 
     title:"Impression toile anime (canvas 60x40)", 
     price:"54.90€",
     img:"https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=800&auto=format&fit=crop",
     short:"Toile haute qualité, rendu couleur professionnel.",
-    category:"goodies", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" },
+    category:"goodies",  },
 
   { id:"p020", 
     title:"Figurine Articulée (Action Figure) 18cm", 
     price:"69.90€",
     img:"https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=800&auto=format&fit=crop",
     short:"Articulations nombreuses, idéal pour poses et shoot photos.",
-    category:"figures", affiliate:"https://www.amazon.fr/dp/ASIN/?tag=<TON-AFFILIATE-TAG>" }
+    category:"figures", }
 ];
 
   }
@@ -313,6 +313,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const searchInput = document.getElementById('searchInput');
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
+
 
 
 

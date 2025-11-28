@@ -189,9 +189,4 @@ footer{padding:14px 20px;background:rgba(0,0,0,0.3);text-align:center;color:var(
     text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
 }
 
-.navbar-otaku input[type="search"]::placeholder {
-    color: #666;
-    font-weight: 600;
-}
-
 

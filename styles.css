@@ -170,9 +170,9 @@ footer{padding:14px 20px;background:rgba(0,0,0,0.3);text-align:center;color:var(
     display: block;
 }
 
-/* --- VISIBILITÉ NAVBAR SUR BANNIÈRE CLAIRE --- */
+/* --- VISIBILITÉ NAVBAR SUR BANNIÈRE CLAIRE (SANS RECHERCHE) --- */
 .navbar-otaku {
-    background: rgba(0, 0, 0, 0.65); /* assombrit pour meilleur contraste */
+    background: rgba(0, 0, 0, 0.65); /* meilleure lisibilité */
     backdrop-filter: blur(5px);
     padding: 12px 20px;
     border-radius: 10px;
@@ -181,12 +181,11 @@ footer{padding:14px 20px;background:rgba(0,0,0,0.3);text-align:center;color:var(
     gap: 15px;
 }
 
-/* Liens du menu */
+/* Liens du menu visibles */
 .navbar-otaku a {
     color: #ffffff !important;
     font-weight: 700;
     font-size: 18px;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
 }
-
-

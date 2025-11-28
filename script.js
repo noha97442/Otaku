@@ -29,7 +29,15 @@ const PRODUCTS = [
     short: "Coffret Naruto 1 à 10 — édition standard.",
     category: "manga",
     affiliate: "https://www.amazon.fr/?tag=TA-PLACEHOLDER"
-  }
+  },
+  {
+    id: "p004", 
+    title: "Figurine Gojo Satoru 22cm", 
+    price: "74.50€",
+    img: "https://images.unsplash.com/photo-1602524202558-4e7f76c3a8f3?q=80&w=800&auto=format&fit=crop",
+    short: "Détails fins, peinture premium pour fans de Jujutsu Kaisen.",
+    category: "figures",
+    affiliate: "https://www.amazon.fr/?tag=TA-PLACEHOLDER"
 ];
 
 const ARTICLES = [
@@ -201,3 +209,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const searchInput = document.getElementById('searchInput');
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
+

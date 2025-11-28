@@ -83,19 +83,19 @@ document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', e => {
         const wave = document.createElement('span');
         wave.classList.add('energy-wave');
-        
+
         const rect = link.getBoundingClientRect();
         wave.style.left = (e.clientX - rect.left) + "px";
         wave.style.top = (e.clientY - rect.top) + "px";
-        
-        link.appendChild(wave);
 
+        link.appendChild(wave);
         setTimeout(() => wave.remove(), 450);
     });
 });
 </script>
 </body>
 </html>
+
 
 
 

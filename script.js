@@ -7,7 +7,7 @@ const PRODUCTS = [
     id: "p001",
     title: "Figurine Luffy - Premium 25cm",
     price: "42,69€",
-    img: "https://m.media-amazon.com/images/I/91ARyK3yMQL.jpg",
+    img: "https://www.abystyle.com/9886537-large_default/one-piece-figurine-luffy.jpg",
     short: "Figurine Monkey D. Luffy de haute qualité — édition limitée.",
     category: "figure",
     affiliate: "https://www.amazon.fr/?tag=TA-PLACEHOLDER" // <-- METS TON LIEN D'AFFILIATION
@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const searchInput = document.getElementById('searchInput');
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
+
 
 
 

@@ -1,11 +1,6 @@
-/* Simple front-end JS: données mock, rendu catalogue, recherche, modal, pages.
-   IMPORTANT: remplace les champs "affiliate" par tes liens d'affiliation (ou ton tag Amazon).
-*/
-
 const PRODUCTS = [
   {
     
-    const PRODUCTS = [
   { id:"p001", title:"Figurine Luffy (Édition Premium) 25cm", price:"89.99€",
     img:"https://images.unsplash.com/photo-1520975916210-c7f055a6b9f1?q=80&w=800&auto=format&fit=crop",
     short:"Figurine haute qualité de Monkey D. Luffy, peinture détaillée, socle inclus.",
@@ -279,6 +274,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const searchInput = document.getElementById('searchInput');
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
+
 
 
 

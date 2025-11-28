@@ -23,7 +23,7 @@ const PRODUCTS = [
   },
   {
     id: "p003",
-    title: "Pack de Naruto - Tome 1 a 3,
+    title: "Pack de Naruto - Tome 1 a 3",
     price: "9,00€",
     img: "https://m.media-amazon.com/images/I/91cTr93aQ6L._AC_UF1000,1000_QL80_.jpg",
     short: "Coffret Naruto 1 à 10 — édition standard.",
@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const searchInput = document.getElementById('searchInput');
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
+
 
 
 

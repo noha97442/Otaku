@@ -125,6 +125,34 @@ footer{padding:14px 20px;background:rgba(0,0,0,0.3);text-align:center;color:var(
   border-bottom: 4px solid #ff4f4f; /* optionnel pour un style anime */
 }
 
+.banner-bg {
+  background-image: url("banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Rend la bannière plus fine */
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* Ajouter un léger voile pour garder le texte lisible */
+.banner-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* assombrit légèrement */
+  z-index: -1;
+}
+
+/* Le contenu du header doit apparaître au-dessus */
+.site-header > * {
+  position: relative;
+  z-index: 2;
+}
 
 
 

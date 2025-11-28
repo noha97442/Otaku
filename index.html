@@ -6,7 +6,23 @@
   <title>OtakuHub — Figurines, mangas & goodies</title>
   <meta name="description" content="OtakuHub — Top figurines, posters et coffrets manga. Comparatifs, guides et bons plans affiliés.">
   <link rel="stylesheet" href="styles.css">
-</head>
+</head><script>
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+        const wave = document.createElement('span');
+        wave.classList.add('energy-wave');
+        
+        const rect = link.getBoundingClientRect();
+        wave.style.left = (e.clientX - rect.left) + "px";
+        wave.style.top = (e.clientY - rect.top) + "px";
+        
+        link.appendChild(wave);
+
+        setTimeout(() => wave.remove(), 450);
+    });
+});
+</script>
+
 <body><div class="banner-otaku">…</div>
 </div>
  
@@ -80,6 +96,7 @@
   <script src="products.js"></script>
 </body>
 </html>
+
 
 
 

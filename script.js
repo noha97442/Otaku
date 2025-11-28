@@ -23,12 +23,12 @@ const PRODUCTS = [
   },
   {
     id: "p003",
-    title: "Coffret Manga Naruto - Vol.1-10",
-    price: "59.00€",
-    img: "https://images.unsplash.com/photo-1526318472351-c75fcf070c01?q=80&w=800&auto=format&fit=crop",
-    short: "Coffret Naruto 1 à 10 — édition standard.",
-    category: "manga",
-    affiliate: "https://www.amazon.fr/?tag=TA-PLACEHOLDER"
+    title: "Naruto Uzumaki - Grande Figurine Collector",
+    price: "55.35€",
+    img: "https://m.media-amazon.com/images/I/51H3sl4RdbL._AC_SL1500_.jpg",
+    short: "27cm Style animé - Collection Grandista Nero Manga Dimensions",
+    category: "figures",
+    affiliate: "https://amzn.to/4phr4dx"
   },
   {
     id: "p004",
@@ -209,6 +209,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const searchInput = document.getElementById('searchInput');
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
+
 
 
 

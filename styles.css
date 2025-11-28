@@ -154,5 +154,24 @@ footer{padding:14px 20px;background:rgba(0,0,0,0.3);text-align:center;color:var(
   z-index: 2;
 }
 
+.banner-bg {
+  position: relative;
+}
+
+/* Voile sombre */
+.banner-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* assombrit le header */
+  z-index: 0;
+}
+
+/* Le contenu doit passer au-dessus */
+.banner-bg * {
+  z-index: 1;
+  position: relative;
+}
+
 
 

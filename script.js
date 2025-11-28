@@ -25,7 +25,7 @@ const PRODUCTS = [
     id: "p003",
     title: "Naruto Uzumaki - Grande Figurine Collector",
     price: "55.35€",
-    img: "https://m.media-amazon.com/images/I/51H3sl4RdbL._AC_SL1500_.jpg",
+    img: "https://m.media-amazon.com/images/I/81LoVS6XdRL._AC_UF1000,1000_QL80_.jpg",
     short: "27cm Style animé - Collection Grandista Nero Manga Dimensions",
     category: "figures",
     affiliate: "https://amzn.to/4phr4dx"
@@ -209,6 +209,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const searchInput = document.getElementById('searchInput');
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
+
 
 
 

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OtakuHub — Figurines, mangas & goodies</title>
+  <meta name="description" content="OtakuHub — Top figurines, posters et coffrets manga. Comparatifs, guides et bons plans affiliés.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+      <h1>OtakuHub</h1>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="#figures">Figurines</a>
+      <a href="#goodies">Goodies</a>
+      <a href="article.html">Blog</a>
+    </nav>
+    <div class="search-wrap">
+      <input id="searchInput" placeholder="Rechercher figurine, manga..." />
+      <button id="searchBtn">🔎</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Top figurines & bons plans anime</h2>
+        <p>Comparatifs, guides d'achat et offres affiliées. Pas de stock — tu es redirigé vers des boutiques officielles.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#figures">Voir les figurines</a>
+          <a class="btn" href="article.html">Guide collection</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=800&auto=format&fit=crop" alt="anime" />
+      </div>
+    </section>
+
+    <section id="figures" class="catalog-section">
+      <h3>Figurines populaires</h3>
+      <div id="productsGrid" class="grid"></div>
+    </section>
+
+    <section id="goodies" class="catalog-section">
+      <h3>Goodies & Posters</h3>
+      <div id="goodiesGrid" class="grid"></div>
+    </section>
+
+    <section class="blog-preview">
+      <h3>Derniers articles</h3>
+      <div id="articlesGrid" class="grid-articles"></div>
+      <a class="btn" href="article.html">Voir tous les articles</a>
+    </section>
+  </main>
+
+  <!-- Modal produit -->
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="close">✕</button>
+      <div id="modalInner"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <p>OtakuHub — Site de recommandation. Nous utilisons des liens d’affiliation. Ne vendons pas de produits directement.</p>
+      <div class="footer-links">
+        <a href="#">CGU</a> · <a href="#">Politique de confidentialité</a> · <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ const PRODUCTS = [
   {
     id: "p001",
     title: "Figurine Luffy - Premium 25cm",
-    price: "89.99€",
+    price: "42,69€",
     img: "https://images.unsplash.com/photo-1520975916210-c7f055a6b9f1?q=80&w=800&auto=format&fit=crop",
     short: "Figurine Monkey D. Luffy de haute qualité — édition limitée.",
     category: "figures",
@@ -201,3 +201,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const searchInput = document.getElementById('searchInput');
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
+

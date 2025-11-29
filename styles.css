@@ -343,3 +343,45 @@ footer{padding:14px 20px;background:rgba(0,0,0,0.3);text-align:center;color:var(
     left: 150%;
     opacity: 1;
 }
+
+/* --- BARRE DE RECHERCHE STYLE BULLE BD / MANGA --- */
+
+.search-bar {
+    position: relative;
+    width: 260px;
+    padding: 12px 16px;
+
+    background: #ffffff;
+    color: #000;
+    font-size: 17px;
+    font-weight: 700;
+
+    border: 3px solid #000; /* Contour BD */
+    border-radius: 12px;
+
+    /* Ombre BD décalée */
+    box-shadow: 5px 5px 0px #ff2e63,   /* Ombre rose BD */
+                0 0 10px rgba(255,46,99,0.4);
+
+    transition: 0.25s ease-out;
+    outline: none;
+}
+
+/* Placeholder BD */
+.search-bar::placeholder {
+    color: #444;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* --- EFFET HOVER / FOCUS MANGA --- */
+.search-bar:hover,
+.search-bar:focus {
+    transform: translate(-3px, -3px) scale(1.03); /* Rebond BD */
+    
+    /* Ombre BD plus forte */
+    box-shadow: 8px 8px 0px #ff2e63,
+                0 0 16px rgba(255,46,99,0.75);
+    
+    border-color: #ff2e63; /* Bordure rose neon au survol */
+}

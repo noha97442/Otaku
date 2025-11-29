@@ -7,7 +7,6 @@
   <meta name="description" content="OtakuHub — Top figurines, posters et coffrets manga. Comparatifs, guides et bons plans affiliés.">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Couleur barre de recherche -->
   <style>
     input[type="search"],
     .search-bar {
@@ -54,9 +53,10 @@
     <section id="figures" class="catalog-section">
         <h3>Figurines populaires</h3>
         <div id="productsGrid" class="grid">
+            <!-- Produits existants dans le HTML -->
             <div class="product">Figurine Naruto</div>
             <div class="product">Figurine Goku</div>
-            <div class="product">Figurine Luffy</div>
+            <!-- Les nouveaux produits seront ajoutés ici dynamiquement -->
         </div>
     </section>
 
@@ -66,7 +66,6 @@
         <div id="goodiesGrid" class="grid">
             <div class="goodie">Poster One Piece</div>
             <div class="goodie">Porte-clés Dragon Ball</div>
-            <div class="goodie">Mug Naruto</div>
         </div>
     </section>
 
@@ -76,7 +75,6 @@
         <div id="mangaGrid" class="grid">
             <div class="manga">Guide collection Naruto</div>
             <div class="manga">Top mangas 2025</div>
-            <div class="manga">One Piece Tome 100</div>
         </div>
     </section>
 
@@ -92,46 +90,66 @@
       </div>
   </footer>
 
-  <!-- JS : Filtrage en temps réel -->
+  <!-- JS : Filtrage en temps réel et ajout de nouveaux produits -->
   <script>
-    const searchInput = document.querySelector('.search-bar');
+    // Données des produits, goodies et mangas (dynamique et existants)
+    const newProducts = [
+      { name: "Figurine Luffy" },
+      { name: "Figurine Sasuke" },
+      { name: "Figurine Zoro" }
+    ];
 
-    const productItems = Array.from(document.querySelectorAll('#productsGrid .product'));
-    const goodiesItems = Array.from(document.querySelectorAll('#goodiesGrid .goodie'));
-    const mangaItems = Array.from(document.querySelectorAll('#mangaGrid .manga'));
+    const newGoodies = [
+      { name: "Mug One Piece" },
+      { name: "T-shirt Dragon Ball" }
+    ];
+
+    const newMangas = [
+      { name: "Manga Naruto Tome 100" },
+      { name: "Manga Attack on Titan Tome 30" }
+    ];
+
+    // Fonction pour ajouter les items dynamiquement
+    function renderItems(items, containerId, className) {
+      const container = document.getElementById(containerId);
+      items.forEach(item => {
+        const div = document.createElement("div");
+        div.className = className;
+        div.textContent = item.name;
+        container.appendChild(div);
+      });
+    }
+
+    // Ajoute les nouveaux produits, goodies et mangas
+    renderItems(newProducts, "productsGrid", "product");
+    renderItems(newGoodies, "goodiesGrid", "goodie");
+    renderItems(newMangas, "mangaGrid", "manga");
+
+    // Filtrage en temps réel
+    const searchInput = document.querySelector('.search-bar');
 
     function filterItemsRealtime() {
         const query = searchInput.value.toLowerCase().trim();
 
-        productItems.forEach(item => {
+        document.querySelectorAll('#productsGrid .product').forEach(item => {
             item.style.display = item.textContent.toLowerCase().includes(query) ? '' : 'none';
         });
 
-        goodiesItems.forEach(item => {
+        document.querySelectorAll('#goodiesGrid .goodie').forEach(item => {
             item.style.display = item.textContent.toLowerCase().includes(query) ? '' : 'none';
         });
 
-        mangaItems.forEach(item => {
+        document.querySelectorAll('#mangaGrid .manga').forEach(item => {
             item.style.display = item.textContent.toLowerCase().includes(query) ? '' : 'none';
         });
     }
 
-    // Filtrage dès que l'utilisateur tape
+    // Filtrage dès que l'utilisateur tape dans la barre de recherche
     searchInput.addEventListener('input', filterItemsRealtime);
   </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 

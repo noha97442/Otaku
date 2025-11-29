@@ -37,21 +37,6 @@ const PRODUCTS = [
   }
 ];
 
-const ARTICLES = [
-  {
-    id: "a1",
-    title: "Top 10 figurines One Piece en 2025",
-    excerpt: "Les figurines One Piece les plus recherchées cette année, prix & où acheter.",
-    content: "<p>Contenu exemple du guide Top 10. Remplace par ton texte SEO.</p>"
-  },
-  {
-    id: "a2",
-    title: "Comment repérer les figurines contrefaites",
-    excerpt: "Guide rapide pour éviter les contrefaçons et acheter en confiance.",
-    content: "<p>Signes distinctifs, packaging, poids et prix à surveiller.</p>"
-  }
-];
-
 /* Utility DOM */
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => document.querySelectorAll(s);
@@ -89,10 +74,10 @@ function productCard(p) {
   const el = document.createElement('article');
   el.className = 'card';
   el.innerHTML = `
-    <img src="${p.img}" alt="${p.title}" />
+    <img src="${p.img}" alt="${p.title}" class="product-img" />
     <div class="card-body">
-      <h4>${p.title}</h4>
-      <p>${p.short}</p>
+      <h4 class="product-title">${p.title}</h4>
+      <p class="product-short">${p.short}</p>
       <div class="actions">
         <a class="buy" href="${p.affiliate}" target="_blank" rel="noopener">Voir le prix • ${p.price}</a>
         <a class="more" href="#" data-id="${p.id}">Détails</a>

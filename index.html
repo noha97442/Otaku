@@ -1,107 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OtakuHub — Figurines, mangas & goodies</title>
-    <style>
-        /* Style basique pour les cartes produits */
-        .card {
-            border: 1px solid #ccc;
-            padding: 16px;
-            margin: 10px;
-            display: inline-block;
-            width: 200px;
-            vertical-align: top;
-        }
-
-        .card img {
-            width: 100%;
-            height: auto;
-        }
-
-        .actions {
-            margin-top: 10px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .search-wrap {
-            margin: 20px;
-            text-align: center;
-        }
-
-        .search-bar {
-            padding: 10px;
-            width: 200px;
-        }
-
-        .product-grid {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .hero img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OtakuHub — Figurines, mangas & goodies</title>
+  <meta name="description" content="OtakuHub — Top figurines, posters et coffrets manga. Comparatifs, guides et bons plans affiliés.">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-
-    <!-- HEADER -->
-    <header>
-        <h1>OtakuHub — Trouvez vos produits préférés 🇯🇵</h1>
-    </header>
-
-    <!-- NAVIGATION -->
-    <nav class="nav-manga">
-        <a href="/accueil">Accueil</a>
-        <a href="/figurines">Figurines</a>
-        <a href="/goodies">Goodies</a>
-        <a href="/manga">Manga</a>
-    </nav>
-
-    <!-- BARRE DE RECHERCHE -->
-    <div class="search-wrap">
-        <input type="search" id="searchInput" class="search-bar" placeholder="Rechercher...">
-        <button id="searchBtn">🔎</button>
+  <body><div class="banner-otaku">…</div>
+</div>
+ 
+  <header class="site-header banner-bg">
+    <div class="brand">
+      <img src="logo.svg" alt="Logo" class="logo"" onerror="this.style.display='none'">
+      <h1>Trouvez vos produits préférés 🇯🇵</h1> 
     </div>
+    <nav class="navbar-otaku">
+    <a class="nav-link" href="index.html">Accueil</a>
+    <a class="nav-link" href="figurines.html">Figurines</a>
+    <a class="nav-link" href="goodies.html">Goodies</a>
+    <a class="nav-link" href="blog.html">Blog</a>
+</nav>
+    <div class="search-wrap">
+      <input id="searchInput" placeholder="Rechercher figurine, manga..." />
+      <button id="searchBtn">🔎</button>
+    </div>
+  </header>
 
-    <!-- SECTION: Produits -->
-    <section id="products-section">
-        <h2>Figurines & Produits</h2>
-        <div id="productsGrid" class="product-grid"></div>
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Top figurines & bons plans anime</h2>
+        <p>Comparatifs, guides d'achat et offres affiliées. Pas de stock — tu es redirigé vers des boutiques officielles.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#figures">Voir les figurines</a>
+          <a class="btn" href="article.html">Guide collection</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=800&auto=format&fit=crop" alt="anime" />
+      </div>
     </section>
 
-    <!-- SECTION: Goodies -->
-    <section id="goodies-section">
-        <h2>Goodies & Posters</h2>
-        <div id="goodiesGrid" class="product-grid"></div>
+    <section id="figures" class="catalog-section">
+      <h3>Figurines populaires</h3>
+      <div id="productsGrid" class="grid"></div>
     </section>
 
-    <!-- SECTION: Manga -->
-    <section id="manga-section">
-        <h2>Mangas</h2>
-        <div id="mangaGrid" class="product-grid"></div>
+    <section id="goodies" class="catalog-section">
+      <h3>Goodies & Posters</h3>
+      <div id="goodiesGrid" class="grid"></div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 OtakuHub — Site de recommandation de produits anime.</p>
-    </footer>
+    <section class="blog-preview">
+      <h3>Derniers articles</h3>
+      <div id="articlesGrid" class="grid-articles"></div>
+      <a class="btn" href="article.html">Voir tous les articles</a>
+    </section>
+  </main>
 
-    <script src="votre_fichier.js"></script>
+  <!-- Modal produit -->
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="close">✕</button>
+      <div id="modalInner"></div>
+    </div>
+  </div>
 
+  <footer>
+    <div class="footer-inner">
+      <p>OtakuHub — Site de recommandation. Nous utilisons des liens d’affiliation. Ne vendons pas de produits directement.</p>
+      <div class="footer-links">
+        <a href="#">CGU</a> · <a href="#">Politique de confidentialité</a> · <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+    <script>
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+        const wave = document.createElement('span');
+        wave.classList.add('energy-wave');
+
+        const rect = link.getBoundingClientRect();
+        wave.style.left = (e.clientX - rect.left) + "px";
+        wave.style.top = (e.clientY - rect.top) + "px";
+
+        link.appendChild(wave);
+        setTimeout(() => wave.remove(), 450);
+    });
+});
+</script>
 </body>
-
 </html>
+
+
+
+
+
+
+
+
+
+
+

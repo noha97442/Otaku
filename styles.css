@@ -233,3 +233,54 @@ footer{padding:14px 20px;background:rgba(0,0,0,0.3);text-align:center;color:var(
     left: 150%;
     opacity: 1;
 }
+
+/* ---- STYLE MANGA POUR LA BARRE DE RECHERCHE ---- */
+
+.search-bar {
+    position: relative;
+    padding: 10px 15px;
+    width: 240px;
+
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+
+    border: 2px solid #ff2e63;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+    outline: none;
+
+    box-shadow: 0 0 10px rgba(255, 46, 99, 0.25);
+}
+
+/* Glow + effet néon au focus (comme hover des onglets) */
+.search-bar:focus {
+    background: rgba(255, 46, 99, 0.25);
+    box-shadow: 0 0 12px rgba(255,46,99,0.6),
+                0 0 18px rgba(255,46,99,0.4);
+    transform: translateY(-2px);
+}
+
+/* Speed-line style manga */
+.search-bar::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, white, transparent);
+    top: 0;
+    left: -150%;
+    opacity: 0;
+    transition: 0.3s;
+    transform: rotate(10deg);
+}
+
+/* Speed-line quand tu cliques dans la recherche */
+.search-bar:focus::before {
+    top: 50%;
+    left: 150%;
+    opacity: 1;
+}

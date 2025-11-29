@@ -7,23 +7,7 @@
   <meta name="description" content="OtakuHub — Top figurines, posters et coffrets manga. Comparatifs, guides et bons plans affiliés.">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Correction couleur barre de recherche -->
-  <style>
-        input[type="search"],
-        .search-bar {
-            color: #222 !important;
-            -webkit-text-fill-color: #222 !important;
-        }
-
-        input[type="search"]::placeholder,
-        .search-bar::placeholder {
-            color: #7d7d7d !important;
-            opacity: 1 !important;
-        }
-  </style>
-</head>
-
-<body>
+ <body>
 
     <div class="banner-otaku">…</div>
 
@@ -138,9 +122,34 @@
             });
         });
     </script>
+<script>
+// Récupération des éléments
+const searchInput = document.querySelector('.search-bar');
+const searchBtn = document.getElementById('searchBtn');
+
+// Quand on clique sur le bouton
+searchBtn.addEventListener('click', () => {
+    const query = searchInput.value.toLowerCase();
+    if (!query) return alert("Veuillez entrer un mot-clé.");
+
+    // Exemple : chercher dans les produits et articles (simulé)
+    const products = document.querySelectorAll('#productsGrid .product');
+    const goodies = document.querySelectorAll('#goodiesGrid .goodie');
+    const articles = document.querySelectorAll('#articlesGrid .article');
+
+    // Pour l'exemple, juste afficher une alerte
+    alert("Recherche : " + query + "\nNombre de produits trouvés : " + products.length);
+});
+
+// Optionnel : recherche en appuyant sur Enter
+searchInput.addEventListener('keypress', e => {
+    if (e.key === 'Enter') searchBtn.click();
+});
+</script>
 
 </body>
 </html>
+
 
 
 

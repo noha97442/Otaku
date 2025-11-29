@@ -46,11 +46,14 @@ function renderHome() {
   const pg = document.getElementById('productsGrid');
   const gg = document.getElementById('goodiesGrid');
   const mg = document.getElementById('mangaGrid');
-
+  
+  console.log('Rendering home...');  // Debug
+  
   if (pg) {
     pg.innerHTML = '';
     PRODUCTS.filter(p => p.category === 'figures' || p.category === 'manga').forEach(p => {
       pg.appendChild(productCard(p));
+      console.log('Added product to figures or manga grid:', p.title); // Debug
     });
   }
 
@@ -58,6 +61,7 @@ function renderHome() {
     gg.innerHTML = '';
     PRODUCTS.filter(p => p.category === 'goodies').forEach(p => {
       gg.appendChild(productCard(p));
+      console.log('Added product to goodies grid:', p.title); // Debug
     });
   }
 
@@ -65,12 +69,14 @@ function renderHome() {
     mg.innerHTML = '';
     PRODUCTS.filter(p => p.category === 'manga').forEach(p => {
       mg.appendChild(productCard(p));
+      console.log('Added product to manga grid:', p.title); // Debug
     });
   }
 }
 
 /* Create product card element */
 function productCard(p) {
+  console.log('Creating product card for:', p.title); // Debug
   const el = document.createElement('article');
   el.className = 'card';
   el.innerHTML = `
@@ -152,6 +158,7 @@ function applySearch() {
 
 /* Init */
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOMContentLoaded'); // Debug
   // Render products
   renderHome();
 
@@ -169,7 +176,3 @@ document.addEventListener('DOMContentLoaded', () => {
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   
   const modalEl = document.getElementById('modal');
-  if (modalEl) modalEl.addEventListener('click', (e) => {
-    if (e.target === modalEl) closeModal();
-  });
-});

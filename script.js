@@ -210,6 +210,75 @@ document.addEventListener('DOMContentLoaded', ()=>{
   if(searchInput) searchInput.addEventListener('keyup', (e)=> { if(e.key==='Enter') applySearch(); });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Données des produits à ajouter
+    const newProducts = [
+        { name: "Figurine Luffy" },
+        { name: "Figurine Sasuke" },
+        { name: "Figurine Zoro" }
+    ];
+
+    // Fonction pour rendre les éléments dans le DOM
+    function renderItems(items, containerId, className) {
+        const container = document.getElementById(containerId);
+        
+        // Vérifie si le conteneur existe
+        if (!container) {
+            console.error(`Le conteneur avec l'ID ${containerId} n'a pas été trouvé !`);
+            return;
+        }
+
+        // Pour chaque produit, crée un élément et l'ajoute au conteneur
+        items.forEach(item => {
+            const div = document.createElement("div");
+            div.className = className;
+            div.textContent = item.name;
+            container.appendChild(div);
+        });
+    }
+
+    // Appel de la fonction pour ajouter les nouveaux produits dans la grille
+    renderItems(newProducts, "productsGrid", "product");
+    
+    // Ajoute d'autres produits dans les autres sections (par exemple, goodies et mangas)
+    const newGoodies = [
+        { name: "Mug One Piece" },
+        { name: "T-shirt Dragon Ball" }
+    ];
+
+    const newMangas = [
+        { name: "Manga Naruto Tome 100" },
+        { name: "Manga Attack on Titan Tome 30" }
+    ];
+
+    renderItems(newGoodies, "goodiesGrid", "goodie");
+    renderItems(newMangas, "mangaGrid", "manga");
+
+    // Fonction de filtrage en temps réel
+    const searchInput = document.querySelector('.search-bar');
+    function filterItemsRealtime() {
+        const query = searchInput.value.toLowerCase().trim();
+
+        // Filtrage des produits
+        document.querySelectorAll('#productsGrid .product').forEach(item => {
+            item.style.display = item.textContent.toLowerCase().includes(query) ? '' : 'none';
+        });
+
+        // Filtrage des goodies
+        document.querySelectorAll('#goodiesGrid .goodie').forEach(item => {
+            item.style.display = item.textContent.toLowerCase().includes(query) ? '' : 'none';
+        });
+
+        // Filtrage des mangas
+        document.querySelectorAll('#mangaGrid .manga').forEach(item => {
+            item.style.display = item.textContent.toLowerCase().includes(query) ? '' : 'none';
+        });
+    }
+
+    // Recherche dès que l'utilisateur tape
+    searchInput.addEventListener('input', filterItemsRealtime);
+});
+
 
 
 

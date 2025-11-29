@@ -189,3 +189,47 @@ footer{padding:14px 20px;background:rgba(0,0,0,0.3);text-align:center;color:var(
     letter-spacing: 1px;
     text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
 }
+
+/* STYLE DES ONGLET MANGA OTAKU */
+.nav-manga a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid #ff2e63;
+    border-radius: 6px;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+/* Effet glow */
+.nav-manga a:hover {
+    color: #ffeaea;
+    background-color: #ff2e63;
+    box-shadow: 0 0 15px #ff2e63, 0 0 30px #ff2e63;
+}
+
+/* Speed-lines (effet manga lors du hover) */
+.nav-manga a::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, white, transparent);
+    top: 0;
+    left: -150%;
+    opacity: 0;
+    transform: rotate(10deg);
+    transition: 0.3s;
+}
+
+.nav-manga a:hover::before {
+    top: 50%;
+    left: 150%;
+    opacity: 1;
+}

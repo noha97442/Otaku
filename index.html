@@ -45,7 +45,19 @@
                 <div class="cta-row">
                     <a class="btn primary" href="#figures">Voir les figurines</a>
                     <a class="btn" href="article.html">Guide collection</a>
-                </div>
+                </div>id="productsGrid">
+    <div class="product">Figurine Naruto</div>
+    <div class="product">Figurine Goku</div>
+</div>
+
+<div id="goodiesGrid">
+    <div class="goodie">Poster One Piece</div>
+    <div class="goodie">Porte-clés Dragon Ball</div>
+</div>
+
+<div id="mangaGrid">
+    <div class="manga">Guide collection Naruto</div>
+    <div class="manga">Top mangas 2025</div>
             </div>
 
             <div class="hero-right">
@@ -146,9 +158,53 @@ searchInput.addEventListener('keypress', e => {
     if (e.key === 'Enter') searchBtn.click();
 });
 </script>
+<script>
+// Récupération des éléments
+const searchInput = document.querySelector('.search-bar');
+const searchBtn = document.getElementById('searchBtn');
 
+// Sections et items
+const productsGrid = document.getElementById('productsGrid');
+const goodiesGrid = document.getElementById('goodiesGrid');
+const mangaGrid = document.getElementById('mangaGrid');
+
+const productItems = Array.from(productsGrid.children); 
+const goodiesItems = Array.from(goodiesGrid.children);   
+const mangaItems = Array.from(mangaGrid.children);       
+
+function filterItems() {
+    const query = searchInput.value.toLowerCase().trim();
+
+    // Filtrer produits
+    productItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(query) ? '' : 'none';
+    });
+
+    // Filtrer goodies
+    goodiesItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(query) ? '' : 'none';
+    });
+
+    // Filtrer mangas
+    mangaItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(query) ? '' : 'none';
+    });
+}
+
+// Recherche au clic
+searchBtn.addEventListener('click', filterItems);
+
+// Recherche en appuyant sur Enter
+searchInput.addEventListener('keypress', e => {
+    if (e.key === 'Enter') filterItems();
+});
+</script>
 </body>
 </html>
+
 
 
 

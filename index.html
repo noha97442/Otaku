@@ -1,6 +1,29 @@
 <!doctype html>
 <html lang="fr">
 <head>
+  <head>
+    <style>
+        /* Fond transparent flouté avec texte blanc */
+        input[type="search"], input[type="text"], .search-bar {
+            background: rgba(0, 0, 0, 0.4); /* Fond transparent sombre */
+            color: white;                   /* Texte blanc */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure discrète */
+            border-radius: 8px;             /* Bordures arrondies */
+            padding: 10px;                  /* Espacement interne */
+            font-size: 16px;                /* Taille de texte confortable */
+            backdrop-filter: blur(5px);     /* Applique un flou derrière la barre */
+            -webkit-backdrop-filter: blur(5px); /* Compatibilité avec Safari */
+        }
+
+        /* Effet focus */
+        input[type="search"]:focus, input[type="text"]:focus, .search-bar:focus {
+            background: rgba(0, 0, 0, 0.6); /* Fond plus opaque en focus */
+            border: 1px solid rgba(255, 255, 255, 0.6); /* Bordure nette */
+            outline: none; /* Retirer le contour par défaut */
+        }
+    </style>
+</head>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>OtakuHub — Figurines, mangas & goodies</title>
@@ -95,6 +118,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 </script>
 </body>
 </html>
+
 
 
 
